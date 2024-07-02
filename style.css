@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #cf9aff, #95c0ff);
@@ -13,23 +13,22 @@
     padding: 4% 0% 0% 10%;
 }
 
-.container h1{
+.container h1 {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    font-weight: 60px;
 }
 
-.container h1 img{
+.container h1 img {
     width: 3rem;
 }
 
-.container button img{
+.container button img {
     width: 2rem;
     margin-right: 8px;
 }
 
-.container button{
+.container button {
     display: flex;
     align-items: center;
     background: linear-gradient(#9418fd, #571094);
@@ -43,23 +42,49 @@
     cursor: pointer;
 }
 
-.input-box{
-    position: relative;
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Changed to flex-start for better alignment */
+    gap: 20px; /* Added gap between notes for better spacing */
+}
+
+.input-box {
     width: 100%;
     max-width: 500px;
     min-height: 150px;
     background: #fff;
     color: #333;
     padding: 20px;
-    margin: 20px 0;
+    margin-bottom: 20px; /* Changed margin to bottom only for spacing */
     outline: none;
     border-radius: 5px;
+    position: relative;
 }
 
-.input-box img{
+.input-box img {
     width: 2rem;
     position: absolute;
     bottom: 15px;
     right: 15px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 8% 4%;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container button {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+
+    .input-box {
+        max-width: calc(100% - 40px); /* Adjusted max-width to fit screen better */
+    }
 }
